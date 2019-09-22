@@ -129,7 +129,7 @@ jobs:
               - "f5:25:6a:e5:ac:4b:84:fb:60:54:14:82:f1:e9:6c:f9" # disable-secrets-detection
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: /home/circleci/project
+          at: /home/circleci/project/artifacts
       - run:
           name: Configure Test Filter
           when: always
