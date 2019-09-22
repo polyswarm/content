@@ -87,14 +87,14 @@ jobs:
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
           # taken to be the root directory of the workspace.
-          root: /home/circleci/project/artifacts
+          root: /home/circleci/project
           # Must be relative path from root
           paths:
             - Tests/id_set.json
             - Documentation/doc-CommonServer.json
-            - content_new.zip
-            - content_test.zip
-            - content_yml.zip
+            - artifacts/content_new.zip
+            - artifacts/content_test.zip
+            - artifacts/content_yml.zip
             - release-notes.md
   
   instance_testing:
@@ -129,7 +129,7 @@ jobs:
               - "f5:25:6a:e5:ac:4b:84:fb:60:54:14:82:f1:e9:6c:f9" # disable-secrets-detection
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: /home/circleci/project/artifacts
+          at: /home/circleci/project
       - run:
           name: Configure Test Filter
           when: always
