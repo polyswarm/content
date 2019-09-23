@@ -1,5 +1,5 @@
 ## [Unreleased]
-Added 4 commands:
+Added 4 commands.
   - ***GitHub-list-pr-review-comments***
   - ***GitHub-update-pull-request***
   - ***GitHub-is-pr-merged***
